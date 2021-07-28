@@ -14,12 +14,17 @@
     <c:url var = "updateButton" value = "/updateInfo">
         <c:param name="empId" value = "${employee.id}"/>
     </c:url>
+
+    <c:url var = "deleteButton" value = "/deleteEmployee">
+        <c:param name = "empId" value = "${employee.id}"/>
+    </c:url>
     <tr>
     <td>${employee.name}</td>
     <td>${employee.surname}</td>
     <td>${employee.department}</td>
     <td>${employee.salary}</td>
     <td><input type = "submit" value = "Update" onClick="window.location.href = '${updateButton}'"> </td>
+    <td><input type = "submit" value = "Delete" onClick="window.location.href='${deleteButton}'"></td>
     </tr>
 </c:forEach>
 </table>
